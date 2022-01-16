@@ -100,3 +100,5 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
+new WOW().init();
+document.documentElement.style.setProperty('--animate-duration', '.8s');
