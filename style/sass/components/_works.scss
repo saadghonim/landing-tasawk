@@ -1,0 +1,118 @@
+.works_parant{
+  background-color: $main_color;
+  clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  padding: 160px 0 140px;
+  position: relative;
+  .img_position{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .img_position2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .works{
+    h4{
+      @include title_main;
+      text-align: start;
+      margin-bottom: 45px;
+      color: $color_1;
+      text-transform: uppercase;
+    }
+    .grid_works{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 100px;
+      .div_work{
+        position:relative;
+        overflow: hidden;
+        img{
+          max-width: 100%;
+          transition: .5s;
+          z-index: 1;
+        }
+        span{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $main_color;
+          opacity: 0;
+          visibility: hidden;
+          font-size: $font_s - 2;
+          color: $color_1;
+          font-weight: 500;
+          transition: .5s;
+        }
+        &:hover{
+          img{
+            transform: scale(1.1);
+          }
+          span{
+            opacity: 0.8;
+            visibility: visible;
+          };
+        }
+        .work_hover{
+          a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+
+        }
+      }
+    }
+    p{
+      font-size: $font_s + 4;
+      text-align: center;
+      color: $color_1;
+      font-weight: 400;
+      margin-bottom: 40px;
+
+    }
+    .btn_work{
+      @include btn_whatsapp;
+    }
+
+  }
+}
+
+@include xs{
+  .works_parant{
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    padding: 100px 0 100px;
+    .works{
+      h4{
+        margin-bottom: 30px;
+        font-size: 22;
+      }
+      .grid_works{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+      p{
+        margin-bottom: 30px;
+  
+      }
+      .btn_work{
+        width: 280px;
+        height: 50px;
+      }
+  
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.content_parant{
+padding-top: 100px;
+img{
+  max-width: 100%
+}
+  h2{
+    @include title_main;
+    font-size: $font_s * 2 ;
+    padding-top: 120px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: start;
+  }
+  p{
+    font-size: $font_s + 8;
+    color: $main_color;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .btn_content{
+    @include btn_whatsapp;
+    margin: 0;
+    width: 229px;
+    padding: 0 50px;
+  }
+}
+
+@include xs{
+  .content_parant{
+    padding: 100px 0 40px;
+    img{
+      max-width: 100%
+    }
+      h2{
+        @include title_main;
+        padding-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+      p{
+        margin-bottom: 30px;
+        text-align: center
+      }
+      .btn_content{
+        @include btn_whatsapp;
+        margin: 0;
+        width: 170px;
+        height: 50px;
+        padding: 0;
+        margin: auto;
+      }
+    }
+}

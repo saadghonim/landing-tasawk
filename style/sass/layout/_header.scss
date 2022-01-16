@@ -1,0 +1,143 @@
+
+header{
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  nav{
+    padding-top: 15px;
+    img{
+      display: none;
+    }
+    .bars_{
+      display: none;
+    }
+    .nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .close_{
+        display: none;
+      }
+      .anc_nav{
+        margin: 0 42px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: $font_s - 2;
+        font-weight: 700;
+        color: $color_2;
+        transition: .5s;
+        &:hover{
+          color: $color_1;
+        }
+        }
+      img{
+        width: 62px;
+        margin: 0 60px;
+        display: block;
+      }
+    }
+
+  }
+}
+
+
+@include sm{
+  header{
+    nav{
+    padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bars_{
+        display: block;
+        font-size: $font_s + 8;
+        color: $color_2;
+        transition: .5s;
+        &:hover{
+          color: $color_1;
+        }
+      }
+      >a{
+        img{
+          width:40px;
+          display: block;
+        }
+      }
+      .nav_mob{
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 99;
+        .nav{
+          padding: 100px 0;
+          background-color: $color_1;
+          flex-direction: column;
+          .close_{
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #c6c6c6;
+            font-size: $font_s + 8;
+          }
+          .anc_nav{
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: $font_s;
+            &:hover{
+              color: $color_3;
+            }
+            }
+            img{
+              display: none;
+            }
+        }
+      }
+
+  
+    }
+  }
+}
+
+.whatsapp_fixed{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 50;
+  transition: .8s;
+  &:hover{
+    transform: scale(1.1);
+  }
+  a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:#25d466;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i{
+      color: $color_1;
+      font-size: $font_s * 3;
+    }
+  }
+}
+
+@include xs{
+  .whatsapp_fixed{
+    left: 10px;
+    bottom: 36px;
+    a{
+      width: 40px;
+      height: 40px;
+      i{
+        font-size: $font_s * 2;
+      }
+    }
+  }
+}

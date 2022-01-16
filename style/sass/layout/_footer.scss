@@ -1,0 +1,153 @@
+footer{
+  padding: 100px 0 50px;
+  background-color: $main_color;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  display: block;
+  position: relative;
+  .img_position_f{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .scroll_up{
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.302);
+    width: 40px;
+    height: 40px;
+    right: 75px;
+    bottom: 90px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:.5s;
+    cursor: pointer;
+
+    i{
+      font-size: $font_s + 4;
+      color: $color_1;
+    }
+    
+    &:hover{
+      background-color: $color_3;
+    }
+  }
+
+  .footer{
+    text-align: center;
+    .maroof{
+      img{
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+    .contact{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      a{
+        font-size: $font_s + 2;
+        color: $color_1;
+        font-weight: 700;
+        transition: .5s;
+        &:hover{
+          color: $color_3;
+        }
+      }
+      .div_item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child{
+          margin-inline-end: 40px;
+        }
+      }
+      .div_icon{
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-inline-end: 11px;
+
+        i{
+          font-size: $font_s + 10;
+          color: $color_1;
+          
+        }
+      }
+      .whatsapp{
+        background-color: #25d466;
+      }
+      .mail_{
+        background-color: #dc5429;
+      }
+    }
+    .social_media{
+      margin-bottom: 50px;
+      a{
+        margin: 0 10px;
+        font-size: $font_s + 10;
+        color: $color_2;
+        transition: .5s;
+        &:hover{
+          color: $color_3;
+          transform: translateY(-5px);
+        }
+      }
+    }
+    p{
+      font-size: $font_s - 4;
+      color: $color_2;
+    }
+  }
+}
+
+@include xs {
+  footer{
+    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+    padding: 70px 0 20px;
+    position: relative;
+    .scroll_up{
+      right: 10px;
+      bottom: 56px;
+    }
+    .footer{
+      .maroof{
+        img{
+          max-width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+      .contact{
+        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: center;
+        .div_item{
+          &:first-child{
+            margin-inline-end: 0px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .social_media{
+        margin-bottom: 30px;
+        a{
+          margin: 0 5px;
+        }
+      }
+      p{
+        font-size: $font_s - 4;
+        color: $color_2;
+      }
+    }
+  }
+
+}
+
+
+

@@ -1,0 +1,93 @@
+.about_us_parant{
+  margin-bottom: 90px;
+  .about_us{
+    text-align: center;
+    h6{
+      font-size: $font_s - 2;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $main_color;
+      margin-bottom: 30px;
+      letter-spacing: 3px;
+    }
+    p{
+      font-size: $font_s + 8;
+      color: $main_color;
+      font-weight: 700;
+      margin-bottom: 60px;
+      width: 97%;
+      span{
+        color: $color_3;
+      }
+    }
+    .about_us_logos{
+      margin-bottom: 50px;
+      @include dots_;
+      .un_wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a{
+        width: 155px;
+        height: 115px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: auto;
+        img{
+          max-width: 100%;
+          transition: .5s;
+          opacity: 60%;
+          filter: grayscale(1);
+          &:hover{
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .anc_about_us{
+      @include btn_whatsapp;
+
+}
+    }
+}
+
+
+@include md{
+  .about_us_parant{
+    margin-bottom: 90px;
+    .about_us{
+      p{
+        font-size: $font_s + 2;
+        margin-bottom: 40px;
+        width: 100%;
+      }
+      .about_us_logos{
+        @include dots_;
+        a{
+          width: auto;
+          height: 115px;
+          display: flex;
+        }
+      }
+      .anc_about_us{
+      width: 280px;
+      overflow: hidden;
+      height: 50px;
+      }
+    }
+  }
+}
+
+.owl-carousel{
+  .owl-item {
+    img{
+      max-width: 100%!important;
+      width: auto;
+    }
+  }
+} 

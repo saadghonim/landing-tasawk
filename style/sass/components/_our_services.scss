@@ -1,0 +1,121 @@
+.services_parant{
+  clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+  background-color: $color_5;
+  padding: 140px 0 150px;
+  margin-bottom: 100px;
+  .services{
+    text-align: center;
+    span{
+      font-size: $font_s - 2;
+      color: $main_color;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 30px;
+      display: block;
+      letter-spacing: 3px
+    }
+    h4{
+      @include title_main;
+      margin-bottom: 50px;
+      width: 51%;
+
+    }
+    .services_div{
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(5, 1fr);
+      .item{
+        background-color: $color_1;
+        width: 215px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        position: relative;
+        i{
+          font-size: $font_s * 3;
+          color:$color_6;
+          margin-bottom: 20px;
+          width: 50px;
+          height: 50px;
+        }
+        .star_{
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          z-index: 1;
+          font-size: $font_s + 8;
+          color: #fcc317;
+          width: auto;
+          height: auto;
+        }
+        h5{
+          font-size: $font_s;
+          color: $main_color;
+          line-height: 1.25;
+          font-weight: 500;
+          width: 90%;
+          margin: auto;
+          transition: .5s;
+          height: 40px;
+          margin: 0;
+          transition: .5s;
+
+        }
+        &:hover{
+          background-color: $main_color;
+          h5{
+            color: $color_1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm{
+  .services_parant{
+    .services{
+      h4{
+        width: 100%;
+      }
+      .services_div{
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+          width: 155px;
+          height: 145px;
+        }
+      }
+    }
+  }
+}
+
+@include xxs{
+  .services_parant{
+    clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
+    padding: 100px 0;
+    .services{
+      span{
+        margin-bottom: 20px;
+      }
+      h4{
+        width: auto;
+        margin-bottom: 40px;
+        font-size: $font_s + 6;
+      }
+      .services_div{
+        .item{
+          width: 155px;
+          height: 145px;
+          i{
+            font-size: 40px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
