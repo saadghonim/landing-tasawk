@@ -72,6 +72,11 @@
         }
       }
     }
+            iframe{
+          width: 555px;
+          height: 318px;
+
+        }
   }
   .drag_down_parant{
     position: absolute;
@@ -165,10 +170,10 @@
           height: 45px;
         }
       }
-      iframe{
-        width: 84%;
-        height: auto;
-      }
+      // iframe{
+      //   width: 84%;
+      //   height: auto;
+      // }
   }
 
 
@@ -201,14 +206,29 @@
             margin: auto;
           }
         }
-        iframe{
-          width: 80%;
-          height: auto;
-        }
+        // iframe{
+        //   width: 300px;
+        //   height: 180px;
+        // }
     } 
     .drag_down_parant{
       bottom: 35px;
     } 
   }
 
+}
+
+@include xxsv{
+  .introduction_parant{
+      .introduction{
+
+        iframe{
+          width: 300px;
+          height: 180px;
+        }
+    } 
+    .drag_down_parant{
+      bottom: 35px;
+    } 
+  }
 }
