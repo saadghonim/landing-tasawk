@@ -55,6 +55,7 @@ header{
         font-size: $font_s + 8;
         color: $color_2;
         transition: .5s;
+        cursor: pointer;
         &:hover{
           color: $color_1;
         }
@@ -83,6 +84,12 @@ header{
             left: 20px;
             color: #c6c6c6;
             font-size: $font_s + 8;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+              color: $color_3;
+              
+            }
           }
           .anc_nav{
             margin: 0;
