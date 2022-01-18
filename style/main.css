@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("/fonts/Montserrat-Bold.woff2") format("woff2"), url("/fonts/Montserrat-Bold.woff") format("woff"), url("/fonts/Montserrat-Bold.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -286,8 +286,8 @@ header nav .nav img {
 footer {
   padding: 100px 0 50px;
   background-color: #1e2d51;
-  -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 11.7%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 11.7%, 100% 0, 100% 100%, 0% 100%);
   display: block;
   position: relative;
 }
@@ -481,8 +481,8 @@ footer .footer p {
   background: #1e2d51;
   height: 100vh;
   margin-bottom: 120px;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 93.5%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 93.5%, 0% 100%);
   position: relative;
   text-align: center;
   display: -webkit-box;
@@ -565,6 +565,7 @@ footer .footer p {
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 229px;
+  margin: 0;
 }
 
 .introduction_parant .introduction .content_t a:hover {
@@ -775,7 +776,7 @@ footer .footer p {
   color: #1e2d51;
   font-weight: 700;
   margin-bottom: 60px;
-  width: 97%;
+  width: 98%;
 }
 
 .about_us_parant .about_us p span {
@@ -1011,7 +1012,7 @@ footer .footer p {
   line-height: 1.5;
   text-align: center;
   margin-bottom: 50px;
-  width: 51%;
+  width: 52%;
 }
 
 .services_parant .services .services_div {
@@ -1214,8 +1215,8 @@ footer .footer p {
 
 .works_parant {
   background-color: #1e2d51;
-  -webkit-clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0% 100%);
-          clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0% 100%);
+  -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+          clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
   padding: 160px 0 140px;
   position: relative;
 }

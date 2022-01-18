@@ -2,7 +2,7 @@
   background: rgb(30,45,81);
   height: 100vh;
   margin-bottom: 120px;
-  clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 93.5%, 0% 100%);
   position: relative;
   text-align: center;
   display: flex;
@@ -53,6 +53,7 @@
       a{
         @include btn_whatsapp;
         width: 229px;
+        margin: 0;
       }
     }
             iframe{
