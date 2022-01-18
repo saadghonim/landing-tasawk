@@ -56,7 +56,7 @@
           color: $main_color;
           line-height: 1.25;
           font-weight: 500;
-          width: 90%;
+          width: 86%;
           margin: auto;
           transition: .5s;
           height: 40px;
@@ -84,6 +84,7 @@
       .services_div{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         .item{
           width: 155px;
           height: 145px;

@@ -1,6 +1,6 @@
 .works_parant{
   background-color: $main_color;
-  clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0% 100%);
   padding: 160px 0 140px;
   position: relative;
   .img_position{
@@ -77,7 +77,7 @@
       }
     }
     p{
-      font-size: $font_s + 4;
+      font-size: $font_s + 8;
       text-align: center;
       color: $color_1;
       font-weight: 400;

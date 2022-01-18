@@ -2,7 +2,7 @@
   background: rgb(30,45,81);
   height: 100vh;
   margin-bottom: 120px;
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
   position: relative;
   text-align: center;
   display: flex;
@@ -51,30 +51,14 @@
         line-height: 36px;
       }
       a{
-        background-image: linear-gradient( 65deg, rgb(212,57,42) 0%, rgb(224,97,40) 100%);
-        background-position: center;
-        background-size: 600px;
-        transition: .5s;
+        @include btn_whatsapp;
         width: 229px;
-        height: 56px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: $font_s;
-        color: $color_1;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        &:hover{
-          text-decoration: none;
-          background-position: right;
-          transform: translateY(-5px);
-        }
       }
     }
             iframe{
           width: 555px;
           height: 318px;
+          border: none;
 
         }
   }
@@ -84,8 +68,8 @@
     left: 50%;
     bottom: 70px;
     .drag_down{
-      border: 1.5px solid #7788b0;
-      width: 20px;
+      border: 2px solid #7788b0;
+      width: 22px;
       height: 39px;
       display: block;
       margin: auto;

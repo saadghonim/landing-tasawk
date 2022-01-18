@@ -28,23 +28,30 @@
         align-items: center;
         justify-content: center;
       }
-      a{
-        width: 155px;
-        height: 115px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin: auto;
-        img{
-          max-width: 100%;
-          transition: .5s;
-          opacity: 60%;
-          filter: grayscale(1);
-          &:hover{
-            filter: grayscale(0);
-            opacity: 1;
-            transform: scale(1.1);
+      .logo_div{
+        &:not(:last-child){
+          margin-inline-end: 4px;
+        }
+        a{
+          width: 155px;
+          height: 115px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          margin: auto;
+          &:not(:first-child){
+            margin-left: 5px;
+          }
+          img{
+            max-width: 100%;
+            transition: .5s;
+            opacity: 60%;
+            filter: grayscale(1);
+            &:hover{
+              filter: grayscale(0);
+              opacity: 1;
+            }
           }
         }
       }

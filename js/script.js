@@ -47,17 +47,35 @@ $(document).ready(function(){
     }, 1000);
   });
 
-  jQuery(window).on('scroll', function() {
-    if(jQuery(window).scrollTop() > 20) {
-        jQuery('header').css({
-            "background-color": "#1e2d51",
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 20) {
+        $('header').css({
+            "background-color": "#ffffff",
             "padding-bottom": "15px"
           });
+          $(".anc_nav").hover(function(){
+            $(this).css("color", "#7788b0");
+            }, function(){
+            $(this).css("color", "#1e2d51");
+          });
+          $(".anc_nav").css("color", "#1e2d51")
+          $("nav a img").attr('src','images/tasawk-logo2.svg')
     } else {
-      jQuery('header').css({
-        "background-color":"unset",
-      });
-  
+        $('header').css({
+          "background-color":"unset",
+        });
+        $('.anc_nav').hover(function(){
+          $(this).css("color", "#1e2d51")
+      })
+        $(".anc_nav").hover(function(){
+          $(this).css("color", "#ffffff");
+          }, function(){
+            $(this).css("color", "#7788b0");
+        });
+        $(".anc_nav").css("color", "#7788b0")
+
+        $("nav a img").attr('src','images/tasawk-logo.svg')
+
     }
   });
   // about us
@@ -82,7 +100,6 @@ $(document).ready(function(){
       }
   })
   }
-
 });
 
 var fixedBar = document.getElementById("header_");

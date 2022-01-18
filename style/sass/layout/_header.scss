@@ -33,7 +33,7 @@ header{
         }
         }
       img{
-        width: 62px;
+        width: 57px;
         margin: 0 60px;
         display: block;
       }
@@ -46,7 +46,7 @@ header{
 @include sm{
   header{
     nav{
-    padding-top: 10px;
+    padding-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,7 +57,7 @@ header{
         transition: .5s;
         cursor: pointer;
         &:hover{
-          color: $color_1;
+          color: $color_7;
         }
       }
       >a{
@@ -138,7 +138,7 @@ header{
 @include xs{
   .whatsapp_fixed{
     left: 10px;
-    bottom: 36px;
+    bottom: 56px;
     a{
       width: 40px;
       height: 40px;

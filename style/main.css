@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("ttf");
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2"), url("/fonts/Montserrat-Bold.woff") format("woff"), url("/fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("ttf");
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -158,14 +158,14 @@ header nav .nav .anc_nav:hover {
 }
 
 header nav .nav img {
-  width: 62px;
+  width: 57px;
   margin: 0 60px;
   display: block;
 }
 
 @media only screen and (max-width: 991px) {
   header nav {
-    padding-top: 10px;
+    padding-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -185,7 +185,7 @@ header nav .nav img {
     cursor: pointer;
   }
   header nav .bars_:hover {
-    color: #ffffff;
+    color: #cb512f;
   }
   header nav > a img {
     width: 40px;
@@ -272,7 +272,7 @@ header nav .nav img {
 @media only screen and (max-width: 767px) {
   .whatsapp_fixed {
     left: 10px;
-    bottom: 36px;
+    bottom: 56px;
   }
   .whatsapp_fixed a {
     width: 40px;
@@ -286,8 +286,8 @@ header nav .nav img {
 footer {
   padding: 100px 0 50px;
   background-color: #1e2d51;
-  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
   display: block;
   position: relative;
 }
@@ -481,8 +481,8 @@ footer .footer p {
   background: #1e2d51;
   height: 100vh;
   margin-bottom: 120px;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 94%, 0% 100%);
   position: relative;
   text-align: center;
   display: -webkit-box;
@@ -541,13 +541,15 @@ footer .footer p {
 }
 
 .introduction_parant .introduction .content_t a {
-  background-image: linear-gradient(65deg, #d4392a 0%, #e06128 100%);
-  background-position: center;
-  background-size: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e06128), color-stop(#d4392a), color-stop(#d4392a), to(#e06128));
+  background-image: linear-gradient(to right, #e06128, #d4392a, #d4392a, #e06128);
   -webkit-transition: .5s;
   transition: .5s;
-  width: 229px;
-  height: 56px;
+  background-size: 200%;
+  width: 318px;
+  overflow: hidden;
+  height: 55px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,18 +564,48 @@ footer .footer p {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
+  width: 229px;
 }
 
 .introduction_parant .introduction .content_t a:hover {
   text-decoration: none;
-  background-position: right;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  background-position: 100%;
+}
+
+@-webkit-keyframes animation_ {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes animation_ {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
 }
 
 .introduction_parant .introduction iframe {
   width: 555px;
   height: 318px;
+  border: none;
 }
 
 .introduction_parant .drag_down_parant {
@@ -585,8 +617,8 @@ footer .footer p {
 }
 
 .introduction_parant .drag_down_parant .drag_down {
-  border: 1.5px solid #7788b0;
-  width: 20px;
+  border: 2px solid #7788b0;
+  width: 22px;
   height: 39px;
   display: block;
   margin: auto;
@@ -794,7 +826,12 @@ footer .footer p {
           justify-content: center;
 }
 
-.about_us_parant .about_us .about_us_logos a {
+.about_us_parant .about_us .about_us_logos .logo_div:not(:last-child) {
+  -webkit-margin-end: 4px;
+          margin-inline-end: 4px;
+}
+
+.about_us_parant .about_us .about_us_logos .logo_div a {
   width: 155px;
   height: 115px;
   display: -webkit-box;
@@ -810,7 +847,11 @@ footer .footer p {
   margin: auto;
 }
 
-.about_us_parant .about_us .about_us_logos a img {
+.about_us_parant .about_us .about_us_logos .logo_div a:not(:first-child) {
+  margin-left: 5px;
+}
+
+.about_us_parant .about_us .about_us_logos .logo_div a img {
   max-width: 100%;
   -webkit-transition: .5s;
   transition: .5s;
@@ -819,20 +860,18 @@ footer .footer p {
           filter: grayscale(1);
 }
 
-.about_us_parant .about_us .about_us_logos a img:hover {
+.about_us_parant .about_us .about_us_logos .logo_div a img:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
   opacity: 1;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .about_us_parant .about_us .anc_about_us {
-  background-image: linear-gradient(65deg, #d4392a 0%, #e06128 100%);
-  background-position: center;
-  background-size: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e06128), color-stop(#d4392a), color-stop(#d4392a), to(#e06128));
+  background-image: linear-gradient(to right, #e06128, #d4392a, #d4392a, #e06128);
   -webkit-transition: .5s;
   transition: .5s;
+  background-size: 200%;
   width: 318px;
   overflow: hidden;
   height: 55px;
@@ -855,9 +894,7 @@ footer .footer p {
 
 .about_us_parant .about_us .anc_about_us:hover {
   text-decoration: none;
-  background-position: left;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  background-position: 100%;
 }
 
 @-webkit-keyframes animation_ {
@@ -1031,7 +1068,7 @@ footer .footer p {
   color: #1e2d51;
   line-height: 1.25;
   font-weight: 500;
-  width: 90%;
+  width: 86%;
   margin: auto;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1058,6 +1095,9 @@ footer .footer p {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .services_parant .services .services_div .item {
     width: 155px;
@@ -1174,8 +1214,8 @@ footer .footer p {
 
 .works_parant {
   background-color: #1e2d51;
-  -webkit-clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
-          clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  -webkit-clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0% 100%);
+          clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0% 100%);
   padding: 160px 0 140px;
   position: relative;
 }
@@ -1275,7 +1315,7 @@ footer .footer p {
 }
 
 .works_parant .works p {
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   color: #ffffff;
   font-weight: 400;
@@ -1283,11 +1323,11 @@ footer .footer p {
 }
 
 .works_parant .works .btn_work {
-  background-image: linear-gradient(65deg, #d4392a 0%, #e06128 100%);
-  background-position: center;
-  background-size: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e06128), color-stop(#d4392a), color-stop(#d4392a), to(#e06128));
+  background-image: linear-gradient(to right, #e06128, #d4392a, #d4392a, #e06128);
   -webkit-transition: .5s;
   transition: .5s;
+  background-size: 200%;
   width: 318px;
   overflow: hidden;
   height: 55px;
@@ -1310,9 +1350,7 @@ footer .footer p {
 
 .works_parant .works .btn_work:hover {
   text-decoration: none;
-  background-position: left;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  background-position: 100%;
 }
 
 @-webkit-keyframes animation_ {
@@ -1371,7 +1409,7 @@ footer .footer p {
 }
 
 .content_parant {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .content_parant img {
@@ -1403,11 +1441,11 @@ footer .footer p {
 }
 
 .content_parant .btn_content {
-  background-image: linear-gradient(65deg, #d4392a 0%, #e06128 100%);
-  background-position: center;
-  background-size: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e06128), color-stop(#d4392a), color-stop(#d4392a), to(#e06128));
+  background-image: linear-gradient(to right, #e06128, #d4392a, #d4392a, #e06128);
   -webkit-transition: .5s;
   transition: .5s;
+  background-size: 200%;
   width: 318px;
   overflow: hidden;
   height: 55px;
@@ -1427,15 +1465,13 @@ footer .footer p {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
-  width: 229px;
+  width: 238px;
   padding: 0 50px;
 }
 
 .content_parant .btn_content:hover {
   text-decoration: none;
-  background-position: left;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  background-position: 100%;
 }
 
 @-webkit-keyframes animation_ {
@@ -1494,11 +1530,11 @@ footer .footer p {
     text-align: center;
   }
   .content_parant .btn_content {
-    background-image: linear-gradient(65deg, #d4392a 0%, #e06128 100%);
-    background-position: center;
-    background-size: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#e06128), color-stop(#d4392a), color-stop(#d4392a), to(#e06128));
+    background-image: linear-gradient(to right, #e06128, #d4392a, #d4392a, #e06128);
     -webkit-transition: .5s;
     transition: .5s;
+    background-size: 200%;
     width: 318px;
     overflow: hidden;
     height: 55px;
@@ -1526,9 +1562,7 @@ footer .footer p {
   }
   .content_parant .btn_content:hover {
     text-decoration: none;
-    background-position: left;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    background-position: 100%;
   }
   @-webkit-keyframes animation_ {
     0% {

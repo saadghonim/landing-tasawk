@@ -157,12 +157,13 @@
   }
 }
 }
+
+
 @mixin btn_whatsapp{
   background-image: 
-  linear-gradient( 65deg, rgb(212,57,42) 0%, rgb(224,97,40) 100%);
-  background-position: center;
-  background-size: 600px;
+  linear-gradient( to right, #e06128 , #d4392a , #d4392a , #e06128 );
   transition: .5s;
+  background-size: 200%;
   width: 318px;
   overflow: hidden;
   height: 55px;
@@ -175,12 +176,12 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
+
   &:hover{
     text-decoration: none;
-    background-position: left;
-    transform: translateY(-5px);
-    
+    background-position: 100%;
 }
+
 @-webkit-keyframes animation_ {
   0% {
       transform: translateY(-15px);
