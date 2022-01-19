@@ -58,7 +58,8 @@ $(document).ready(function(){
             }, function(){
             $(this).css("color", "#1e2d51");
           });
-          $(".anc_nav").css("color", "#1e2d51")
+          // $(".bars_").css("color", "#1e2d51");
+          $(".anc_nav , .bars_ , .close_").css("color", "#1e2d51");
           $("nav a img").attr('src','images/tasawk-logo2.svg')
     } else {
         $('header').css({
@@ -72,8 +73,8 @@ $(document).ready(function(){
           }, function(){
             $(this).css("color", "#7788b0");
         });
-        $(".anc_nav").css("color", "#7788b0")
-
+        $(".anc_nav , .bars_ , .close_").css("color", "#7788b0")
+        // $(".bars_ , .close_").css("color", "#7788b0");
         $("nav a img").attr('src','images/tasawk-logo.svg')
 
     }
