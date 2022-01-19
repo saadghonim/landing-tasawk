@@ -17,7 +17,8 @@
     h4{
       @include title_main;
       margin-bottom: 50px;
-      width: 52%;
+      text-transform: none;
+      width: 51%;
 
     }
     .services_div{
@@ -55,7 +56,7 @@
           font-size: $font_s;
           color: $main_color;
           line-height: 1.25;
-          font-weight: 500;
+          font-weight: 600;
           width: 86%;
           margin: auto;
           transition: .5s;
@@ -88,7 +89,11 @@
         .item{
           width: 155px;
           height: 145px;
+          h5{
+            width: 93%;
+          }
         }
+
       }
     }
   }
@@ -96,7 +101,7 @@
 
 @include xxs{
   .services_parant{
-    clip-path: polygon(0 3%, 100% 0, 100% 98%, 0 100%);
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
     padding: 100px 0;
     .services{
       span{
@@ -105,12 +110,13 @@
       h4{
         width: auto;
         margin-bottom: 40px;
-        font-size: $font_s + 6;
+        font-size: $font_s + 2;
       }
       .services_div{
         .item{
           width: 47.5%;
-          height: 145px;
+          max-width: 160px;
+          height: 150px;
           i{
             font-size: 40px;
             height: 30px;

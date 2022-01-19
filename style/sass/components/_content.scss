@@ -29,13 +29,17 @@ img{
 
 @include xs{
   .content_parant{
-    padding: 100px 0 40px;
+    padding: 100px 0 0px;
+    text-align: center;
+    margin-bottom: -30px;
     img{
-      max-width: 100%
+      max-width: 100%;
+      width:270px;
+      margin: auto;
     }
       h2{
         @include title_main;
-        padding-top: 40px;
+        padding-top: 0px;
         margin-bottom: 20px;
         text-align: center;
         text-transform: uppercase;
@@ -43,16 +47,19 @@ img{
       }
       p{
         margin-bottom: 30px;
-        text-align: center
+        text-align: center;
+        font-size: $font_s;
+        font-weight: 400;
       }
       .btn_content{
         @include btn_whatsapp;
         margin: 0;
-        width: 170px;
-        height: 50px;
+        width: 229px;
+        height: 55px;
         white-space: nowrap;
         padding: 0;
         margin: auto;
+        margin-bottom: 40px;
       }
     }
 }

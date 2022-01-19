@@ -17,7 +17,7 @@
       margin-bottom: 60px;
       width: 98%;
       span{
-        color: $color_3;
+        color: $color_7;
       }
     }
     .about_us_logos{
@@ -40,9 +40,7 @@
           justify-content: center;
           overflow: hidden;
           margin: auto;
-          &:not(:first-child){
-            margin-left: 5px;
-          }
+          padding: 0 20px;
           img{
             max-width: 100%;
             transition: .5s;
@@ -74,11 +72,14 @@
         width: 100%;
       }
       .about_us_logos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         @include dots_;
         a{
           width: auto;
           height: 115px;
           display: flex;
+          padding: 0;
         }
       }
       .anc_about_us{
@@ -89,7 +90,38 @@
     }
   }
 }
+@include xs{
+  .about_us_parant{
 
+    .about_us{
+      .about_us_logos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 40px;
+        .logo_div{
+          width: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+          padding: 10px;
+          &:not(:last-child){
+            margin-inline-end: 0px;
+          }
+          a{
+            padding: 0;
+            width: auto;
+            height: auto;
+            img{
+              max-height: 100%;
+            }
+          }
+        }
+      }
+      }
+  }
+}
 .owl-carousel{
   .owl-item {
     img{

@@ -109,12 +109,13 @@ footer{
 
 @include xs {
   footer{
-    clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
-    padding: 70px 0 20px;
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+
+    padding: 70px 0 60px;
     position: relative;
     .scroll_up{
-      right: 10px;
-      bottom: 56px;
+      right: 15px;
+      bottom: 20px;
     }
     .footer{
       .maroof{
@@ -131,11 +132,12 @@ footer{
           &:first-child{
             margin-inline-end: 0px;
             margin-bottom: 10px;
+            display: none;
           }
         }
       }
       .social_media{
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         a{
           margin: 0 5px;
         }
@@ -143,6 +145,8 @@ footer{
       p{
         font-size: $font_s - 4;
         color: $color_2;
+        width: 75%;
+        margin:auto;
       }
     }
   }

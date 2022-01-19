@@ -5,6 +5,7 @@ $(document).ready(function(){
       $(".nav_mob").toggle("500");
       $(".moboverlay").fadeIn("500");
       $("body").addClass("over_");
+      $("header").css("transition", "unset")
     });
     $(".close_ , .moboverlay , .anc_nav").click(function(){
       $(".nav_mob").toggle("500");
@@ -51,16 +52,16 @@ $(document).ready(function(){
     if($(window).scrollTop() > 20) {
         $('header').css({
             "background-color": "#ffffff",
-            "padding-bottom": "15px"
+            "padding": "10px 0",
+            
           });
           $(".anc_nav").hover(function(){
             $(this).css("color", "#7788b0");
             }, function(){
             $(this).css("color", "#1e2d51");
           });
-          // $(".bars_").css("color", "#1e2d51");
           $(".anc_nav , .bars_ , .close_").css("color", "#1e2d51");
-          $("nav a img").attr('src','images/tasawk-logo2.svg')
+          $("header").addClass("fixed");
     } else {
         $('header').css({
           "background-color":"unset",
@@ -73,34 +74,39 @@ $(document).ready(function(){
           }, function(){
             $(this).css("color", "#7788b0");
         });
-        $(".anc_nav , .bars_ , .close_").css("color", "#7788b0")
-        // $(".bars_ , .close_").css("color", "#7788b0");
-        $("nav a img").attr('src','images/tasawk-logo.svg')
+        $(".anc_nav , .bars_ , .close_").css("color", "#7788b0");
 
+        $("header").removeClass("fixed");
     }
   });
-  // about us
-  if ($(window).width() <= 1140){
-    $(".about_us_logos").addClass("owl-carousel");
-    $(".logo_div").unwrap();
-    $(".logo_div").addClass("item");
-    $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:false,
-      responsive:{
-          0:{
-              items:3
-          },
-          600:{
-              items:4
-          },
-          1000:{
-              items:5
-          }
+  if ($(window).width() <= 767) {
+
+    $(window).on('scroll', function() {
+      if($(window).scrollTop() > 20) {
+
+            $(".anc_nav , .bars_ , .close_").css("color", "#1e2d51");
+
+            $("header").addClass("fixed");
+      } else {
+
+          $(".anc_nav").hover(function(){
+            $(this).css("color", "#ffffff");
+            }, function(){
+              $(this).css("color", "#7788b0");
+          });
+          $("header").removeClass("fixed");
+  
       }
-  })
+    });
+
   }
+  //about us
+  if ($(window).width() <= 1140){
+    $(".logo_div").unwrap();
+
+  }
+
+
 });
 
 var fixedBar = document.getElementById("header_");

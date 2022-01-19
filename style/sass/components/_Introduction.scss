@@ -145,7 +145,7 @@
       .content_t{
         padding-top: 0px;
         p{
-          font-size: $font_s - 2;
+          font-size: $font_s - 1;
           margin-bottom: 20px;
           line-height: 25px;
         }
@@ -166,20 +166,22 @@
 }
 @include xxs{
   .introduction_parant{
-    padding: 35px 0 0;
-    margin-bottom: 90px;
-  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 98%, 0% 100%);
 
+    padding: 118px 0 0;
+    margin-bottom: 90px;
+    align-items: flex-start;
       .introduction{
         .title_intro{
           margin-bottom: 15px;
+          font-size: $font_s * 2;
         }
         .content_t{
           padding-top: 0px;
           text-align: center;
           margin-bottom: 30px;
           p{
-            margin-bottom: 15px;
+            margin-bottom: 35px;
             text-transform: capitalize;
             line-height: 22px;
           }
@@ -189,12 +191,12 @@
             height: 40px;
             font-weight: 700;
             margin: auto;
+            margin-bottom: 25px;
           }
         }
-        // iframe{
-        //   width: 300px;
-        //   height: 180px;
-        // }
+        iframe{
+          margin-bottom: 50px;
+        }
     } 
     .drag_down_parant{
       bottom: 35px;

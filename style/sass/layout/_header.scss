@@ -1,149 +1,205 @@
-
-header{
+header {
   z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  nav{
-    padding-top: 15px;
-    img{
+  padding-top: 25px;
+
+  nav {
+    img {
       display: none;
     }
-    .bars_{
+    .bars_ {
       display: none;
     }
-    .nav{
+    .nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      .close_{
+      .close_ {
         display: none;
       }
-      .anc_nav{
+      .anc_nav {
         margin: 0 42px;
         cursor: pointer;
         text-transform: uppercase;
         font-size: $font_s - 2;
         font-weight: 700;
         color: $color_2;
-        transition: .5s;
-        &:hover{
+        transition: 0.5s;
+        &:hover {
           color: $color_1;
         }
-        }
-      img{
+      }
+      img {
         width: 57px;
         margin: 0 60px;
         display: block;
       }
     }
-
   }
 }
 
-
-@include sm{
-  header{
-    nav{
-    padding-top: 20px;
+@include sm {
+  header {
+    padding-top: 15px;
+    nav {
       display: flex;
       justify-content: space-between;
+      flex-direction: row-reverse;
       align-items: center;
-      .bars_{
+      .bars_ {
         display: block;
-        font-size: $font_s + 8;
+        font-size: $font_s * 2 - 2;
         color: $color_2;
-        transition: .5s;
+        transition: 0.5s;
+        color: $color_1;
         cursor: pointer;
-        &:hover{
+        &:hover {
           color: $color_7;
         }
       }
-      >a{
-        img{
-          width:40px;
+      > a {
+        img {
+          width: 40px;
           display: block;
         }
       }
-      .nav_mob{
+      .nav_mob {
         display: none;
         position: absolute;
-        top: 10px;
-        left: 10px;
-        right: 10px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
         z-index: 99;
-        .nav{
+        .nav {
           padding: 100px 0;
-          background-color: $color_1;
+          background-color: $main_color;
+          background: linear-gradient(0deg, rgba(30,45,81,0.8603816526610644) 15%, rgba(30,45,81,0.8547794117647058) 15%, rgba(30,45,81,1) 36%);
           flex-direction: column;
-          .close_{
+          height: 100vh;
+          .close_ {
             display: block;
             position: absolute;
             top: 20px;
             left: 20px;
             color: #c6c6c6;
             font-size: $font_s + 8;
-            transition: .5s;
+            transition: 0.5s;
+            color: $color_1;
             cursor: pointer;
-            &:hover{
+            &:hover {
               color: $color_3;
-              
             }
           }
-          .anc_nav{
+          .anc_nav {
             margin: 0;
             margin-bottom: 20px;
             font-size: $font_s;
-            &:hover{
+            color: $color_1;
+
+            &:hover {
               color: $color_3;
+
             }
-            }
-            img{
-              display: none;
-            }
+          }
+          img {
+            display: none;
+          }
         }
       }
-
-  
     }
   }
 }
 
-.whatsapp_fixed{
+.whatsapp_fixed {
   position: fixed;
   left: 20px;
   bottom: 20px;
   z-index: 50;
-  transition: .8s;
-  &:hover{
+  transition: 0.8s;
+  &:hover {
     transform: scale(1.1);
   }
-  a{
+  a {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color:#25d466;
+    background-color: #25d466;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    i{
+    i {
       color: $color_1;
       font-size: $font_s * 3;
     }
   }
 }
 
-@include xs{
-  .whatsapp_fixed{
-    left: 10px;
-    bottom: 56px;
-    a{
-      width: 40px;
-      height: 40px;
-      i{
-        font-size: $font_s * 2;
+@include xs {
+  .whatsapp_fixed {
+    left: 15px;
+    bottom: 20px;
+    a {
+      width: 50px;
+      height: 50px;
+      i {
+        font-size: $font_s * 2 + 8;
+      }
+    }
+  }
+}
+header {
+  nav {
+    .nav {
+      img {
+        display: block;
+        &.lg-dark {
+          display: none;
+        }
+      }
+    }
+    .mobile-logo {
+      display: none;
+    }
+  }
+  &.fixed {
+    nav {
+      .nav {
+        img {
+          display: none;
+          &.lg-dark {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+@include sm {
+  header {
+    nav {
+      .mobile-logo {
+        display: block;
+        width: 108px;
+        &.mobile-dark {
+          display: none;
+        }
+      }
+    }
+    &.fixed {
+      nav {
+        .mobile-logo {
+          display: none;
+          &.mobile-dark {
+            display: block;
+          }
+        }
       }
     }
   }

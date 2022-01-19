@@ -98,7 +98,8 @@
     .works{
       h4{
         margin-bottom: 30px;
-        font-size: 22;
+        font-size: $font_s + 2;
+        text-align: center;
       }
       .grid_works{
         grid-template-columns: repeat(2, 1fr);
@@ -107,6 +108,11 @@
       }
       p{
         margin-bottom: 30px;
+        font-size: $font_s;
+        font-weight: 400;
+        br{
+          display: none;
+        }
   
       }
       .btn_work{
