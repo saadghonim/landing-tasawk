@@ -190,7 +190,6 @@ header nav .nav img {
   header nav .bars_ {
     display: block;
     font-size: 30px;
-    color: #7788b0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #ffffff;
@@ -205,10 +204,10 @@ header nav .nav img {
   }
   header nav .nav_mob {
     display: none;
-    position: absolute;
-    top: 0;
+    position: fixed;
     bottom: 0;
     left: 0;
+    top: 0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -336,6 +335,9 @@ header.fixed nav .nav img.lg-dark {
   }
   header.fixed nav .mobile-logo.mobile-dark {
     display: block;
+  }
+  header.fixed nav .nav img.lg-dark {
+    display: none;
   }
 }
 
@@ -752,19 +754,25 @@ footer .footer p {
   .introduction_parant .img_position {
     width: 30%;
   }
-  .introduction_parant .introduction .title_intro {
+  .introduction_parant .introduction .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .introduction_parant .introduction .row .title_intro {
     font-size: 22px;
     margin-bottom: 20px;
   }
-  .introduction_parant .introduction .content_t {
+  .introduction_parant .introduction .row .content_t {
     padding-top: 0px;
   }
-  .introduction_parant .introduction .content_t p {
+  .introduction_parant .introduction .row .content_t p {
     font-size: 15px;
     margin-bottom: 20px;
     line-height: 25px;
   }
-  .introduction_parant .introduction .content_t a {
+  .introduction_parant .introduction .row .content_t a {
     width: 175px;
     letter-spacing: 1px;
     height: 45px;
@@ -1630,6 +1638,12 @@ footer .footer p {
     padding: 100px 0 0px;
     text-align: center;
     margin-bottom: -30px;
+  }
+  .content_parant .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .content_parant img {
     max-width: 100%;

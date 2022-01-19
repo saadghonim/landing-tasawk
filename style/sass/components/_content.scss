@@ -29,6 +29,9 @@ img{
 
 @include xs{
   .content_parant{
+    .row{
+      flex-direction: column-reverse;
+    }
     padding: 100px 0 0px;
     text-align: center;
     margin-bottom: -30px;

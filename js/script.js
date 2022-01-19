@@ -55,6 +55,7 @@ $(document).ready(function(){
             "padding": "10px 0",
             
           });
+          $(".nav img").css("width", "45px")
           $(".anc_nav").hover(function(){
             $(this).css("color", "#7788b0");
             }, function(){
@@ -66,6 +67,8 @@ $(document).ready(function(){
         $('header').css({
           "background-color":"unset",
         });
+        $(".nav img").css("width", "57px")
+
         $('.anc_nav').hover(function(){
           $(this).css("color", "#1e2d51")
       })
@@ -80,13 +83,39 @@ $(document).ready(function(){
     }
   });
   if ($(window).width() <= 767) {
-
     $(window).on('scroll', function() {
       if($(window).scrollTop() > 20) {
 
-            $(".anc_nav , .bars_ , .close_").css("color", "#1e2d51");
+// 
+$(window).on('scroll', function() {
+  if($(window).scrollTop() > 20) {
+        $(".anc_nav").hover(function(){
+          $(this).css("color", "#cb512f");
+          }, function(){
+          $(this).css("color", "#ffffff");
+        });
+        $(".anc_nav").css("color", "#ffffff");
+        $(".bars_").css("color", "#1e2d51");
 
+  } else {
+      $('header').css({
+        "background-color":"unset",
+      });
+      $(".bars_").css("color", "#1e2d51");
+      $(".anc_nav").hover(function(){
+        $(this).css("color", "#cb512f");
+        }, function(){
+          $(this).css("color", "#ffffff");
+      });
+      $(".bars_").css("color", "#ffffff");
+
+  }
+});
+// 
+            $(".bars_").css("color", "#ffffff");
+            $(".anc_nav , .close_").css("color", "#1e2d51");
             $("header").addClass("fixed");
+            
       } else {
 
           $(".anc_nav").hover(function(){
@@ -94,8 +123,7 @@ $(document).ready(function(){
             }, function(){
               $(this).css("color", "#7788b0");
           });
-          $("header").removeClass("fixed");
-  
+          $("header").removeClass("fixed");  
       }
     });
 
@@ -103,7 +131,7 @@ $(document).ready(function(){
   //about us
   if ($(window).width() <= 1140){
     $(".logo_div").unwrap();
-
+    
   }
 
 

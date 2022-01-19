@@ -138,27 +138,28 @@
     width: 30%;
   }
     .introduction{
-      .title_intro{
-        font-size: $font_s + 6;
-        margin-bottom: 20px;
-      }
-      .content_t{
-        padding-top: 0px;
-        p{
-          font-size: $font_s - 1;
+      .row{
+        flex-direction: column-reverse;
+        .title_intro{
+          font-size: $font_s + 6;
           margin-bottom: 20px;
-          line-height: 25px;
         }
-        a{
-          width: 175px;
-          letter-spacing: 1px;
-          height: 45px;
+        .content_t{
+          padding-top: 0px;
+          p{
+            font-size: $font_s - 1;
+            margin-bottom: 20px;
+            line-height: 25px;
+          }
+          a{
+            width: 175px;
+            letter-spacing: 1px;
+            height: 45px;
+          }
         }
       }
-      // iframe{
-      //   width: 84%;
-      //   height: auto;
-      // }
+
+
   }
 
 
