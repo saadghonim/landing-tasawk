@@ -68,10 +68,6 @@ $(document).ready(function(){
           "background-color":"unset",
         });
         $(".nav img").css("width", "57px")
-
-        $('.anc_nav').hover(function(){
-          $(this).css("color", "#1e2d51")
-      })
         $(".anc_nav").hover(function(){
           $(this).css("color", "#ffffff");
           }, function(){
@@ -85,8 +81,9 @@ $(document).ready(function(){
   if ($(window).width() <= 767) {
     $(window).on('scroll', function() {
       if($(window).scrollTop() > 20) {
-
-// 
+        $(".bars_").css("color", "#ffffff");
+        $("header").addClass("fixed");
+//  
 $(window).on('scroll', function() {
   if($(window).scrollTop() > 20) {
         $(".anc_nav").hover(function(){
@@ -94,13 +91,10 @@ $(window).on('scroll', function() {
           }, function(){
           $(this).css("color", "#ffffff");
         });
-        $(".anc_nav").css("color", "#ffffff");
         $(".bars_").css("color", "#1e2d51");
+        $(".anc_nav, .close_").css("color", "#ffffff");
 
   } else {
-      $('header').css({
-        "background-color":"unset",
-      });
       $(".bars_").css("color", "#1e2d51");
       $(".anc_nav").hover(function(){
         $(this).css("color", "#cb512f");
@@ -108,13 +102,13 @@ $(window).on('scroll', function() {
           $(this).css("color", "#ffffff");
       });
       $(".bars_").css("color", "#ffffff");
+    $(".anc_nav, .close_").css("color", "#ffffff");
 
   }
 });
 // 
-            $(".bars_").css("color", "#ffffff");
-            $(".anc_nav , .close_").css("color", "#1e2d51");
-            $("header").addClass("fixed");
+// $(".bars_").css("color", "#ffffff");
+
             
       } else {
 
@@ -126,7 +120,7 @@ $(window).on('scroll', function() {
           $("header").removeClass("fixed");  
       }
     });
-
+    $(".anc_nav, .close_").css("color", "#ffffff");
   }
   //about us
   if ($(window).width() <= 1140){

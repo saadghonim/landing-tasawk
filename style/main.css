@@ -518,6 +518,9 @@ footer .footer p {
         -ms-flex-align: center;
             align-items: center;
   }
+  footer .footer .contact a {
+    font-weight: 600;
+  }
   footer .footer .contact .div_item:first-child {
     -webkit-margin-end: 0px;
             margin-inline-end: 0px;
@@ -1238,7 +1241,7 @@ footer .footer p {
   .services_parant .services h4 {
     width: auto;
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 17px;
   }
   .services_parant .services .services_div .item {
     width: 47.5%;
