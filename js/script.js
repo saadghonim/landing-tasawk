@@ -61,7 +61,7 @@ $(document).ready(function(){
             }, function(){
             $(this).css("color", "#1e2d51");
           });
-          $(".anc_nav , .bars_ , .close_").css("color", "#1e2d51");
+          $(".anc_nav , .bars_").css("color", "#1e2d51");
           $("header").addClass("fixed");
     } else {
         $('header').css({
@@ -73,7 +73,7 @@ $(document).ready(function(){
           }, function(){
             $(this).css("color", "#7788b0");
         });
-        $(".anc_nav , .bars_ , .close_").css("color", "#7788b0");
+        $(".anc_nav , .bars_").css("color", "#7788b0");
 
         $("header").removeClass("fixed");
     }
@@ -92,7 +92,7 @@ $(window).on('scroll', function() {
           $(this).css("color", "#ffffff");
         });
         $(".bars_").css("color", "#1e2d51");
-        $(".anc_nav, .close_").css("color", "#ffffff");
+        $(".anc_nav").css("color", "#ffffff");
 
   } else {
       $(".bars_").css("color", "#1e2d51");
@@ -102,7 +102,7 @@ $(window).on('scroll', function() {
           $(this).css("color", "#ffffff");
       });
       $(".bars_").css("color", "#ffffff");
-    $(".anc_nav, .close_").css("color", "#ffffff");
+    $(".anc_nav").css("color", "#ffffff");
 
   }
 });
@@ -120,7 +120,7 @@ $(window).on('scroll', function() {
           $("header").removeClass("fixed");  
       }
     });
-    $(".anc_nav, .close_").css("color", "#ffffff");
+    $(".anc_nav").css("color", "#ffffff");
   }
   //about us
   if ($(window).width() <= 1140){
