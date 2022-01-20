@@ -776,9 +776,9 @@ footer .footer p {
     line-height: 25px;
   }
   .introduction_parant .introduction .row .content_t a {
-    width: 175px;
+    width: 228px;
     letter-spacing: 1px;
-    height: 45px;
+    height: 55px;
   }
 }
 
@@ -807,7 +807,7 @@ footer .footer p {
     line-height: 22px;
   }
   .introduction_parant .introduction .content_t a {
-    width: 160px;
+    width: 228px;
     letter-spacing: 0px;
     height: 40px;
     font-weight: 700;
@@ -1052,9 +1052,9 @@ footer .footer p {
     padding: 0;
   }
   .about_us_parant .about_us .anc_about_us {
-    width: 280px;
+    width: 318px;
     overflow: hidden;
-    height: 50px;
+    height: 55px;
   }
 }
 
@@ -1472,6 +1472,8 @@ footer .footer p {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
+  width: 318px;
+  height: 55px;
 }
 
 .works_parant .works .btn_work:hover {
@@ -1533,10 +1535,6 @@ footer .footer p {
   }
   .works_parant .works p br {
     display: none;
-  }
-  .works_parant .works .btn_work {
-    width: 280px;
-    height: 50px;
   }
 }
 
