@@ -214,7 +214,7 @@ header nav .nav img {
     z-index: 99;
   }
   header nav .nav_mob .nav {
-    padding: 100px 0;
+    padding-bottom: 150px;
     background-color: #1e2d51;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, rgba(30, 45, 81, 0.860382)), color-stop(15%, rgba(30, 45, 81, 0.854779)), color-stop(36%, #1e2d51));
     background: linear-gradient(0deg, rgba(30, 45, 81, 0.860382) 15%, rgba(30, 45, 81, 0.854779) 15%, #1e2d51 36%);

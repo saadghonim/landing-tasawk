@@ -52,7 +52,6 @@ header {
       .bars_ {
         display: block;
         font-size: $font_s * 2 - 2;
-        // color: $color_2;
         transition: 0.5s;
         color: $color_1;
         cursor: pointer;
@@ -77,7 +76,7 @@ header {
         height: 100%;
         z-index: 99;
         .nav {
-          padding: 100px 0;
+          padding-bottom:150px;
           background-color: $main_color;
           background: linear-gradient(0deg, rgba(30,45,81,0.8603816526610644) 15%, rgba(30,45,81,0.8547794117647058) 15%, rgba(30,45,81,1) 36%);
           flex-direction: column;
