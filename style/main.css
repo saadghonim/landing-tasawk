@@ -268,6 +268,7 @@ header nav .nav .anc_nav {
 
 header nav .nav img {
   display: block;
+  width: 57px;
 }
 
 header nav .nav img.lg-dark {
@@ -276,6 +277,11 @@ header nav .nav img.lg-dark {
 
 header nav .mobile-logo {
   display: none;
+}
+
+header.fixed {
+  background-color: #ffffff;
+  padding: 10px 0;
 }
 
 header.fixed nav .bars_ {
@@ -296,6 +302,7 @@ header.fixed nav .nav img {
 
 header.fixed nav .nav img.lg-dark {
   display: block;
+  width: 45px;
 }
 
 @media only screen and (max-width: 991px) {

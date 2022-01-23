@@ -161,6 +161,7 @@ header {
       }
       img {
         display: block;
+        width: 57px;
         &.lg-dark {
           display: none;
         }
@@ -171,6 +172,8 @@ header {
     }
   }
   &.fixed {
+    background-color: $color_1;
+    padding: 10px 0;
     nav {
       .bars_{
         color:$color_1 ;
@@ -186,6 +189,7 @@ header {
           display: none;
           &.lg-dark {
             display: block;
+            width: 45px;
           }
         }
       }

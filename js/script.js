@@ -26,55 +26,22 @@ $(document).ready(function(){
         scrollTop: $("#about_").offset().top -1
     }, 1000);
   });
+  $(".anc_nav").on("click", function(e){
+    e.preventDefault();
   
-  $("#click_about_").click(function () {
     $('html, body').animate({
-        scrollTop: $("#about_ ").offset().top -70
-    }, 1000);
-  });
-  
-  $("#click_Services_").click(function () {
-    $('html, body').animate({
-        scrollTop: $("#Services_").offset().top -0
-    }, 1000);
-  });
-  
-  $("#click_Works_").click(function () {
-    $('html, body').animate({
-        scrollTop: $("#Works").offset().top -0
-    }, 1000);
-  });
-  $("#click_Contact_").click(function () {
-    $('html, body').animate({
-        scrollTop: $("#Contact_").offset().top -70
-    }, 1000);
-  });
+            scrollTop: $("#"+$(this).data("id")).offset().top -0
+        }, 1000);
+    
+  })
   $(window).on('scroll', function() {
     if($(window).scrollTop() > 20) {
-        $('header').css({
-            "background-color": "#ffffff",
-            "padding": "10px 0",
-            
-          });
-          $(".nav img").css("width", "45px")
           $("header").addClass("fixed");
     } else {
-        $('header').css({
-          "background-color":"unset",
-        });
-        $(".nav img").css("width", "57px")
         $("header").removeClass("fixed");
-    }
+    };
   });
-  if ($(window).width() <= 991) {
-    $(window).on('scroll', function() {
-      if($(window).scrollTop() > 20) {
-        $("header").addClass("fixed");
-} else {
-          $("header").removeClass("fixed");  
-      }
-    });
-  }
+
   //about us
   if ($(window).width() <= 1140){
     $(".logo_div").unwrap();
