@@ -45,6 +45,8 @@
             max-width: 100%;
             transition: .5s;
             opacity: 60%;
+            width: auto;
+            height: auto;
             filter: grayscale(1);
             &:hover{
               filter: grayscale(0);
