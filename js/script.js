@@ -8,9 +8,11 @@ $(document).ready(function(){
       $("header").css("transition", "unset")
     });
     $(".close_ , .moboverlay , .anc_nav").click(function(){
-      $(".nav_mob").toggle("500");
-      $(".moboverlay").fadeOut("500");
+      $(".nav_mob").toggle("300");
+      $(".moboverlay").fadeOut("300");
       $("body").removeClass("over_");
+      $("header").css("transition", "unset")
+
     });
   }
   $("#click_logo ,.scroll_up ").click(function () {
@@ -47,7 +49,6 @@ $(document).ready(function(){
         scrollTop: $("#Contact_").offset().top -70
     }, 1000);
   });
-
   $(window).on('scroll', function() {
     if($(window).scrollTop() > 20) {
         $('header').css({
@@ -56,91 +57,40 @@ $(document).ready(function(){
             
           });
           $(".nav img").css("width", "45px")
-          $(".anc_nav").hover(function(){
-            $(this).css("color", "#7788b0");
-            }, function(){
-            $(this).css("color", "#1e2d51");
-          });
-          $(".anc_nav , .bars_").css("color", "#1e2d51");
           $("header").addClass("fixed");
     } else {
         $('header').css({
           "background-color":"unset",
         });
         $(".nav img").css("width", "57px")
-        $(".anc_nav").hover(function(){
-          $(this).css("color", "#ffffff");
-          }, function(){
-            $(this).css("color", "#7788b0");
-        });
-        $(".anc_nav , .bars_").css("color", "#7788b0");
-
         $("header").removeClass("fixed");
     }
   });
-  if ($(window).width() <= 767) {
+  if ($(window).width() <= 991) {
     $(window).on('scroll', function() {
       if($(window).scrollTop() > 20) {
-        $(".bars_").css("color", "#ffffff");
         $("header").addClass("fixed");
-//  
-$(window).on('scroll', function() {
-  if($(window).scrollTop() > 20) {
-        $(".anc_nav").hover(function(){
-          $(this).css("color", "#cb512f");
-          }, function(){
-          $(this).css("color", "#ffffff");
-        });
-        $(".bars_").css("color", "#1e2d51");
-        $(".anc_nav").css("color", "#ffffff");
-
-  } else {
-      $(".bars_").css("color", "#1e2d51");
-      $(".anc_nav").hover(function(){
-        $(this).css("color", "#cb512f");
-        }, function(){
-          $(this).css("color", "#ffffff");
-      });
-      $(".bars_").css("color", "#ffffff");
-    $(".anc_nav").css("color", "#ffffff");
-
-  }
-});
-// 
-// $(".bars_").css("color", "#ffffff");
-
-            
-      } else {
-
-          $(".anc_nav").hover(function(){
-            $(this).css("color", "#ffffff");
-            }, function(){
-              $(this).css("color", "#7788b0");
-          });
+} else {
           $("header").removeClass("fixed");  
       }
     });
-    $(".anc_nav").css("color", "#ffffff");
   }
   //about us
   if ($(window).width() <= 1140){
     $(".logo_div").unwrap();
-    
   }
-
-
 });
 
 var fixedBar = document.getElementById("header_");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos >= currentScrollPos) {
     fixedBar.style.cssText = 
-    'top: 0; transition: .5s;'
+    'top: 0; transition: .3s;'
   } else {
     fixedBar.style.cssText = 
-    'top: -130px; transition:.5s;'
+    'top: -130px; transition:.3s;'
 
   }
   prevScrollpos = currentScrollPos;

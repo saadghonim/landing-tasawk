@@ -156,6 +156,9 @@ header {
 header {
   nav {
     .nav {
+      .anc_nav{
+        color: $color_2;
+      }
       img {
         display: block;
         &.lg-dark {
@@ -169,6 +172,15 @@ header {
   }
   &.fixed {
     nav {
+      .bars_{
+        color:$color_1 ;
+      }
+      .anc_nav{
+        color: $main_color;
+        &:hover{
+          color: $color_7;
+        }
+      }
       .nav {
         img {
           display: none;
@@ -183,6 +195,15 @@ header {
 @include sm {
   header {
     nav {
+      .bars_{
+        color:$color_1 ;
+      }
+      .anc_nav{
+        color: $color_1;
+        &:hover{
+          color: $color_7;
+        }
+      }
       .mobile-logo {
         display: block;
         width: 108px;
@@ -193,6 +214,15 @@ header {
     }
     &.fixed {
       nav {
+        .anc_nav{
+          visibility: visible;
+        }
+        .bars_{
+          color:$main_color ;
+          &:hover{
+            color:$color_7;
+          }
+        }
         .mobile-logo {
           display: none;
           &.mobile-dark {
