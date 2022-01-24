@@ -37,3 +37,20 @@ body {
     background: $color_3; 
   }
   
+  .loading-img {
+    background-color: #fafafa !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .loading-img img {
+    opacity: 0 !important;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+  }
+  
+  .loaded-img img {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
