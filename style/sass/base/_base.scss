@@ -1,10 +1,8 @@
 body {
     font-family     : "Montserrat";
     font-weight     : normal;
-    font-style      : normal;
     overflow-x      : hidden;
 }
-
 .ul_gh {
     list-style: none;
     padding    : 0;
@@ -30,26 +28,6 @@ body {
     outline         : none !important;
     transition      : 0.5s;
   }
-  .d_flex {
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-  }
-  .moboverlay {
-    position        : fixed;
-    display         : none;
-    top             : 0;
-    bottom          : 0;
-    right           : 0;
-    left            : 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index         : 99;
-    overflow        : hidden;
-  }
-  .over_{
-    overflow-y: hidden;
-  }
-  
   ::-webkit-scrollbar {
     width: 5px;
     height: 100px;

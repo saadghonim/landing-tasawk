@@ -22,7 +22,6 @@
     }
     .about_us_logos{
       margin-bottom: 50px;
-      @include dots_;
       .un_wrap{
         display: flex;
         align-items: center;
@@ -76,7 +75,6 @@
       .about_us_logos{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        @include dots_;
         a{
           width: auto;
           height: 115px;
@@ -124,11 +122,3 @@
       }
   }
 }
-.owl-carousel{
-  .owl-item {
-    img{
-      max-width: 100%!important;
-      width: auto;
-    }
-  }
-} 
